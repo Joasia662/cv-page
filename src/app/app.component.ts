@@ -15,9 +15,12 @@ export class AppComponent {
 
   ngOnInit(){
   var vara = new Vara("#vara-container","https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/Satisfy/SatisfySL.json",[{
-    text:"Joanna Cepuch"
+    text:"Joanna Cepuch",
 }],{
-  fontSize:140
+  fontSize:140,
+  strokeWidth:1,
+  textAlign:"center",
+  
 });
   }
 
