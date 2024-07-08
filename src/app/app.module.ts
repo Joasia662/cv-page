@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { WebProjectsComponent } from './components/web-projects/web-projects.component';
 import { GraphicProjectsComponent } from './components/graphic-projects/graphic-projects.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { MainPageComponent } from './components/main-page/main-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     AppComponent,
     HeaderComponent,
     WebProjectsComponent,
-    GraphicProjectsComponent
+    GraphicProjectsComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,

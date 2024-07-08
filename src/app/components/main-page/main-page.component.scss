@@ -1,0 +1,17 @@
+.element{
+    height: 70%;
+    display: flex;
+    align-items: baseline;
+    &-name{
+        font-size: 140px;
+    }
+}
+
+
+#signature{
+    stroke-dasharray: 400;
+}
+
+img{
+    max-height: 75%;
+}
