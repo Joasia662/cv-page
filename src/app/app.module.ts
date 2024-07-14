@@ -11,6 +11,7 @@ import { WebProjectsComponent } from './components/web-projects/web-projects.com
 import { GraphicProjectsComponent } from './components/graphic-projects/graphic-projects.component';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

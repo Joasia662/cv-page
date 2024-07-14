@@ -1,0 +1,29 @@
+.my-side-nav{
+    font-size: 25px;
+    color: white !important;
+    background-color: #38C6C8;
+    box-shadow: 100px 0px 60px 0px #FAE5C8 inset;
+}
+
+.mat-icon {
+    font-size: 80px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+  }
+
+.my-icons{
+    padding: 2% 0 0 2%;
+}
+
+.project-desc{
+    color: white;
+}
+
+::ng-deep .mat-tooltip {
+    white-space: pre-line; // Allow line break
+  }
+
+.tech{
+    cursor: pointer;
+}
