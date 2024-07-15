@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { WorkExpirienceComponent } from '../work-expirience/work-expirience.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  readonly dialog = inject(MatDialog);
 
+  openDialog() {
+    this.dialog.open(WorkExpirienceComponent);
+  }
 }

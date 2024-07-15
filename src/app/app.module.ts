@@ -13,6 +13,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import {MatIconModule} from '@angular/material/icon';
 import { SliderComponent } from './components/slider/slider.component';
+import { WorkExpirienceComponent } from './components/work-expirience/work-expirience.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { SliderComponent } from './components/slider/slider.component';
     WebProjectsComponent,
     GraphicProjectsComponent,
     MainPageComponent,
-    SliderComponent
+    SliderComponent,
+    WorkExpirienceComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { SliderComponent } from './components/slider/slider.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTooltipModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

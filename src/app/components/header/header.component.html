@@ -1,14 +1,18 @@
-<div style=" height: 20%;display: flex; justify-content: start; padding-top: 2%; padding-left: 2%; width: 100%;" >
-    <a mat-button routerLink='/projects' > Projects</a>
-    <span  style="padding-left: 4%;">
-        <a mat-button routerLink='/graphic-designs' >Graphic Portfolio</a>
-        </span>
-    <span  style="padding-left: 4%;" matTooltip="Work in progress"><button [disabled]="true" mat-button disabled >Work Exprience</button></span>
-    <span  style="padding-left: 4%;" matTooltip="Work in progress"><button [disabled]="true" mat-button disabled >Contact Info</button></span>
-    <span style="margin-left: 4%; display: flex; justify-content: center; align-items: center;">
-        <img src="../assets/github_logo_white.png"  alt="">
-        <a style="margin-left: 2%;" mat-button href="https://github.com/Joasia662 " target="_blank">Github Repository</a>
+<div style=" height: 20%;display: flex; justify-content: start; padding-top: 2%; padding-left: 2%; width: 100%;">
+    <a mat-button routerLink='/projects'> Projects</a>
+    <span style="padding-left: 4%;">
+        <a mat-button routerLink='/graphic-designs'>Graphic Portfolio</a>
     </span>
-    
+    <span style="padding-left: 4%;">
+        <a mat-button (click)="openDialog()">Work Exprience</a>
+    </span>
+    <span style="padding-left: 4%;" matTooltip="Work in progress"><button [disabled]="true" mat-button disabled>Contact
+            Info</button></span>
+    <span style="margin-left: 4%; display: flex; justify-content: center; align-items: center;">
+        <img src="../assets/github_logo_white.png" alt="">
+        <a style="margin-left: 2%;" mat-button href="https://github.com/Joasia662 " target="_blank">Github
+            Repository</a>
+    </span>
+
 
 </div>
