@@ -8,7 +8,8 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 auto;
-    max-width: 1500px;
+    max-width: 70vw;
+    max-height: 70vh;
 }
 .timeline {
 	display: flex;
@@ -53,9 +54,7 @@ background: linear-gradient(to right, #38C6C8 45%, #b1dcf5 45%, #b1dcf5 45%, #38
 .info:hover {
 	background: bisque;
 }
-.info {
-	margin-bottom: 3%;
-}
+
 .info h2 {
 	margin: 0;
 	font-size: 18px;
