@@ -26,7 +26,7 @@ export class SliderComponent implements OnInit, OnDestroy {
     if (this.timeoutId) {
       window.clearTimeout(this.timeoutId);
     }
-    this.timeoutId = window.setTimeout(() => this.goToNext(), 10000);
+    //this.timeoutId = window.setTimeout(() => this.goToNext(), 10000);
   }
 
   goToPrevious(): void {
