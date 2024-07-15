@@ -12,6 +12,7 @@ import { GraphicProjectsComponent } from './components/graphic-projects/graphic-
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import {MatIconModule} from '@angular/material/icon';
+import { SliderComponent } from './components/slider/slider.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     WebProjectsComponent,
     GraphicProjectsComponent,
-    MainPageComponent
+    MainPageComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
