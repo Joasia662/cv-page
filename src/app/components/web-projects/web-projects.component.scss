@@ -10,12 +10,6 @@
     padding: 1% 0 0 2%;
 }
 
-.tech {
-    cursor: pointer;
-    height: 60px;
-}
-
-
 .keyboard {
     border-bottom: 88px solid #c8c8c8;
     border-left: 120px solid transparent;
@@ -60,6 +54,7 @@
 }
 
 .screen {
+    cursor: pointer;
     margin-top: 5px;
     border-radius: 15px;
     width: 95%;
