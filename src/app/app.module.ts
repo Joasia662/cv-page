@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { SliderComponent } from './components/slider/slider.component';
 import { WorkExpirienceComponent } from './components/work-expirience/work-expirience.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ProjectCardsComponent } from './project-cards/project-cards.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     GraphicProjectsComponent,
     MainPageComponent,
     SliderComponent,
-    WorkExpirienceComponent
+    WorkExpirienceComponent,
+    ProjectCardsComponent
   ],
   imports: [
     BrowserModule,

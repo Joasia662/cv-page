@@ -1,7 +1,29 @@
-<!--<div style="height: 100%; width: 100%; display: flex; justify-content: center; align-items: center;"class="full-screen">
+<mat-icon class="my-icons" routerLink='../main-page'>keyboard_backspace</mat-icon>
+
+
+
+<div style="height: 90%; width: 100%; display: flex; justify-content: center; align-items: center;">
+    <div>
+        <div class="screen-frame">
+            <div class="screen">
+               <app-project-cards></app-project-cards>
+            </div>
+        </div>
+        <div class="laptop-base">
+            <div class="keyboard"></div>
+        </div>
+        <div class="laptop-front">
+        </div>
+    </div>
+
+
+</div>
+<!--
+
+<div style="height: 100%; width: 100%; display: flex; justify-content: center; align-items: center;"class="full-screen">
     <div style="height: 100%; width: 60%;"class="img">
         <div class="my-icons">
-            <mat-icon routerLink='main-page'>keyboard_backspace</mat-icon>
+            <mat-icon routerLink='../main-page'>keyboard_backspace</mat-icon>
         </div>
       
         <div style="height: 100%; width: 100%; display: flex; justify-content: center; align-items: center;">
@@ -35,67 +57,5 @@
       
     </div>
 </div>
-
 -->
-<div style="height: 100%; width: 100%; overflow-y: auto; ">
-    <div id="card-area">
-        <div class="wrapper">
-            <div class="box-area">
-                <div class="box">
-                    <img class="box-img" src="../assets/Weather Forecast.png" alt="">
-                    <div class="overlay">
-                        <h3>Weather-Forecast</h3>
 
-                        <p>A Single Page Application that display a 5-day forecast for a city by name. It is based on
-                            API: <a href="https://openweathermap.org/forecast5">https://openweathermap.org/forecast5</a>
-                        </p>
-                        <br>
-                   
-                        <div style="height:40px !important; display:  flex; justify-content:space-around; width: 100%;"> 
-                            <img class="tech"  height="50" src="../assets/angular.png"  matTooltip="This application was implemented using Angular version 16.2.1.">
-                            <img class="tech" height="50" src="../assets/material.png"  matTooltip="This application use Angular Material components.
-                            Learn more on https://material.angular.io/">
-                            <img class="tech" height="50"  src="../assets/ngrx.png"  matTooltip="NgRx State Managment was used in this application.
-                            
-                            Learn more on https://ngrx.io/">
-                            <img class="tech"  height="50" src="../assets/jasmine.png" matTooltip="This application has implemented tests using Jasmine.
-                             
-                            Learn more on https://jasmine.github.io/ ">
-                        </div>
-                        <br>
-                        <div>
-                            <button mat-raised-button>Check More Details</button>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <img class="box-img" src="../assets/portret.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Scuba Diving</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi explicabo libero ea nam.
-                            Quod.</p><a href="#">Book Now</a>
-                    </div>
-                </div>
-            </div>
-            <div class="box-area">
-                <div class="box">
-                    <img class="box-img" src="../assets/portret.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Mountaineering</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi explicabo libero ea nam.
-                            Quod.</p><a href="#">Book Now</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img class="box-img" src="../assets/portret.jpg" alt="">
-                    <div class="overlay">
-                        <h3>Scuba Diving</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque modi explicabo libero ea nam.
-                            Quod.</p><a href="#">Book Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
