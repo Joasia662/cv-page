@@ -6,16 +6,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { WebProjectsComponent } from './components/web-projects/web-projects.component';
 import { GraphicProjectsComponent } from './components/graphic-projects/graphic-projects.component';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MainPageComponent } from './components/main-page/main-page.component';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
 import { SliderComponent } from './components/slider/slider.component';
 import { WorkExpirienceComponent } from './components/work-expirience/work-expirience.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 import { ProjectCardsComponent } from './project-cards/project-cards.component';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ProjectCardsComponent } from './project-cards/project-cards.component';
     MainPageComponent,
     SliderComponent,
     WorkExpirienceComponent,
-    ProjectCardsComponent
+    ProjectCardsComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { ProjectCardsComponent } from './project-cards/project-cards.component';
     MatButtonModule,
     MatTooltipModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

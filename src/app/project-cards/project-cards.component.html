@@ -8,21 +8,21 @@
             <div>
                 <h1>{{projects[selectedIndex].title}}</h1>
                 <h2 [innerHTML]='projects[selectedIndex].desc'></h2>
-                <h2 *ngIf="!projects[selectedIndex].isApiMine"> It uses publicly avaliable API: <a
-                        [href]="projects[selectedIndex].apiLink">{{projects[selectedIndex].apiLink}}</a> </h2>
+                <h2 *ngIf="!projects[selectedIndex].isApiMine" > It uses publicly avaliable API: 
+                    <a [href]="projects[selectedIndex].apiLink" target="_blank">{{projects[selectedIndex].apiLink}}</a> </h2>
 
                 <br><br>
 
-                <h2>Repository Link <a [href]="projects[selectedIndex].repo">{{projects[selectedIndex].repo}}</a></h2>
+                <h2>Repository Link <a [href]="projects[selectedIndex].repo" target="_blank">{{projects[selectedIndex].repo}}</a></h2>
 
-                <br><br>
+                <br>
 
                 <div style="display: flex; justify-content:space-around; width: 80%; margin-left: 10%;">
 
-                    <img *ngIf="projects[selectedIndex].tech.angular.isPresent" class="tech" width="100"
+                    <img *ngIf="projects[selectedIndex].tech.angular?.isPresent" class="tech" width="100"
                         src="../assets/angular.png"
                         matTooltip="This application was implemented using Angular">
-                    <img *ngIf="projects[selectedIndex].tech.angular.isInProgress" class="tech black-white" width="100"
+                    <img *ngIf="projects[selectedIndex].tech.angular?.isInProgress" class="tech black-white" width="100"
                         src="../assets/angular.png"
                         matTooltip="Frontend part of this application is going to be implemented in Angular">
                    
@@ -50,6 +50,10 @@
                     <img *ngIf="projects[selectedIndex].tech.jasmine?.isInProgress" class="tech black-white" width="100" src="../assets/jasmine.svg" matTooltip="Tests using Jasmine are being currently implemented.
                     Learn more on https://jasmine.github.io/ ">
 
+                    <img *ngIf="projects[selectedIndex].tech.windowsForm?.isPresent" class="tech" height="200" src="../assets/windowsForm.png" matTooltip="This application was implemented using Windows Forms. Learn more: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-8.0
+                    Learn more on https://jasmine.github.io/ ">
+               
+                    
                 </div>
             </div>
             <a (click)="changeSelectedItem('next')"><mat-icon>arrow_right</mat-icon></a>
