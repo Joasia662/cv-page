@@ -12,10 +12,10 @@
 
 .keyboard {
     border-bottom: 88px solid #c8c8c8;
-    border-left: 120px solid transparent;
-    border-right: 120px solid transparent;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
     height: 0;
-    width: 560px*2;
+    width: 460px*2;
     padding: 140px 0px 0px 0px;
 
 }
@@ -26,7 +26,7 @@
     border-left: 160px solid transparent;
     border-right: 160px solid transparent;
     height: 0;
-    width: 660*2px;
+    width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,7 +36,7 @@
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35);
     border-radius: 3px;
     height: 10px*2;
-    width: 820px*2;
+    width: 1320px;
     background: rgb(153, 152, 152);
     background: linear-gradient(90deg, rgba(153, 152, 152, 1) 0%, rgba(233, 233, 233, 1) 66%);
 }
@@ -45,8 +45,8 @@
     box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.96);
     margin-left: 160px;
     border-radius: 15px;
-    width: 660px*2;
-    height: 400px*2;
+    width: 1000px;
+    height: 600px;
     background-color: #525252;
     display: flex;
     justify-content: center;
@@ -54,7 +54,6 @@
 }
 
 .screen {
-    cursor: pointer;
     margin-top: 5px;
     border-radius: 15px;
     width: 95%;

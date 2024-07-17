@@ -1,29 +1,39 @@
 <div style="height:100%; width: 100%">
     <div class="main-cointainer">
-        <img [width]="1254" height="720" src="../assets/WeatherForecastScreen.png">
-        <div class="overlay">
-            <h1>Weather Forecast</h1>
-            <h2>A Single Page Application that display a 5-day forecast for a city by name. It is based on API: <a
-                    href="https://openweathermap.org/forecast5">https://openweathermap.org/forecast5</a></h2>
-            <br> <br> <br>
-            <h2>Repository Link <a
-                    href="https://github.com/Joasia662/Weather-Forecast">https://github.com/Joasia662/Weather-Forecast</a>
-            </h2>
+     
+            <img [width]="950" height="540" [src]="selectedItem.imgPath">
 
-            <br> <br> <br>
 
-            <div style="display: flex; justify-content:space-around; width: 70%; margin-left: 16%;">
-                <img class="tech" width="100" src="../assets/angular.png"
-                    matTooltip="This application was implemented using Angular version 16.2.1.">
-                <img class="tech" width="100" src="../assets/material.png" matTooltip="This application use Angular Material components.
-                    Learn more on https://material.angular.io/">
-                <img class="tech" width="100" src="../assets/ngrx.svg" matTooltip="NgRx State Managment was used in this application.
-                    
-                    Learn more on https://ngrx.io/">
-                <img class="tech" width="100" src="../assets/jasmine.svg" matTooltip="This application has implemented tests using Jasmine.
-                     
-                    Learn more on https://jasmine.github.io/ ">
+            <div class="overlay">
+               <a (click)="changeSelectedItem()"> <mat-icon>arrow_left</mat-icon></a>
+                
+                <div>
+                    <h1>{{selectedItem.title}}</h1>
+                    <h2 [innerHTML] = 'selectedItem.desc'></h2>
+                    <h2 *ngIf="!selectedItem.isApiMine"> It is based on API: <a [href]="selectedItem.apiLink">{{selectedItem.apiLink}}</a> </h2>
+                    <br> <br>
+                    <h2>Repository Link <a
+                            [href]="selectedItem.repo">{{selectedItem.repo}}</a>
+                           
+                    </h2>
+
+                    <br> <br> 
+
+                    <div style="display: flex; justify-content:space-around; width: 80%; margin-left: 10%;">
+                        <img class="tech" width="100" src="../assets/angular.png"
+                            matTooltip="This application was implemented using Angular version 16.2.1.">
+                        <img class="tech" width="100" src="../assets/material.png" matTooltip="This application use Angular Material components.
+                        Learn more on https://material.angular.io/">
+                        <img class="tech" width="100" src="../assets/ngrx.svg" matTooltip="NgRx State Managment was used in this application.
+                        
+                        Learn more on https://ngrx.io/">
+                        <img class="tech" width="100" src="../assets/jasmine.svg" matTooltip="This application has implemented tests using Jasmine.
+                         
+                        Learn more on https://jasmine.github.io/ ">
+                    </div>
+                </div>
+                <mat-icon>arrow_right</mat-icon>
             </div>
         </div>
-    </div>
+    
 </div>
