@@ -6,12 +6,43 @@
     <span style="padding-left: 4%;">
         <a mat-button (click)="openDialog()">Work Exprience</a>
     </span>
-    <span style="padding-left: 4%;" matTooltip="Work in progress"><button [disabled]="true" mat-button disabled>Contact
-            Info</button></span>
-    <span style="margin-left: 4%; display: flex; justify-content: center; align-items: center;">
-        <img src="../assets/github_logo_white.png" alt="">
-        <a style="margin-left: 2%;" mat-button href="https://github.com/Joasia662 " target="_blank">Github
-            Repository</a>
+
+
+    <span style="padding-left: 4%;">
+        <a mat-button [matMenuTriggerFor]="menu">Contact Info</a>
+    </span>
+
+    <mat-menu #menu="matMenu">
+
+
+        <a href="https://www.linkedin.com/in/joanna-cepuch/" target="_blank" style="color:black !important"
+            mat-menu-item>
+            <span style="width: 100%;display: flex;align-items: center; justify-content: space-between;">
+                <img style="margin-left: 3px;" height="30" src="../assets/linkedin.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span>joanna-cepuch</span>
+            </span>
+        </a>
+
+        <a href="mailto:asiacepuch1@gmail.com? subject=Hello" target="_blank" style="color:black !important"
+            mat-menu-item>
+            <span style="width: 100%;display: flex;align-items: center; justify-content: start">
+                <mat-icon style="height: 30px; font-size: 35px;width: 40px;">mail</mat-icon>
+                <span>asiacepuch1@gmail.com</span>
+            </span>
+        </a>
+
+
+    </mat-menu>
+
+    <span style="margin-left: 4%;">
+
+        <a style="margin-left: 2%;" mat-button href="https://github.com/Joasia662 " target="_blank">
+            <span style="width: 300px;display: flex;align-items: center; justify-content: start;">
+                <img src="../assets/github_logo_white.png" alt="">
+                <span style="margin-left: 10px;">Github Repository</span>
+            </span>
+
+        </a>
     </span>
 
 

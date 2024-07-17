@@ -15,7 +15,7 @@ export class GraphicProjectsComponent {
   ];
 
   slideRecepie: SlideInterface[] = [
-    { url: '/assets/recepie1.png', title: 'recepie manager' },
+    { url: '/assets/recipe1.png', title: 'recepie manager' },
     { url: '/assets/recepie2.png', title: 'recepie manager' },
   ];
   

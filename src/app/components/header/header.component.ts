@@ -13,4 +13,9 @@ export class HeaderComponent {
   openDialog() {
     this.dialog.open(WorkExpirienceComponent);
   }
+
+  sendEmail(){
+    const mailText = "mailto:asiacepuch1@gmail.com?subject=Hello"; // add the links to body
+    window.location.href = mailText;
+  }
 }
