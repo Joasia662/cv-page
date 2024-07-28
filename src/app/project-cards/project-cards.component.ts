@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { ComponentType } from '@angular/cdk/portal';
+import { Component, TemplateRef, inject } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-project-cards',
@@ -37,8 +39,7 @@ projects = [
   ]
 */
 export class ProjectCardsComponent {
-
-  constructor() {
+  constructor(public dialog: MatDialog) {
     this.selectedIndex = 0;
   }
 
@@ -47,11 +48,12 @@ export class ProjectCardsComponent {
     {
       title: 'Weather Forecast',
       imgPath: '../assets/WeatherForecastScreen.png',
-      desc: "A Single Page Application that display a 5-day forecast for a city by name. ",
+      desc: "A Single Page Application that displays a 5-day forecast for a city by name",
       isApiMine: false,
       apiLink: 'https://openweathermap.org/forecast5',
       repo: 'https://github.com/Joasia662/Weather-Forecast',
-      host: '',
+      host: 'http://35.159.179.207/weather-forecast',
+      lightHouseReport: '../assets/WeatherForecastReport.png',
       tech: {
         angular: {
           isPresent: true,
@@ -79,9 +81,10 @@ export class ProjectCardsComponent {
     {
       title: 'Single Page Cook Book',
       imgPath: '../assets/RecipeManager.png',
-      desc: `The application manage recipes. It allows users to create, edit, remove and list recipes. <b>It is currently in progress.</b>
-       In next version all mentioned functionalities and state managment ngXs will be implemented.<br>
-       This app currently uses mocks but in the near future it I will create an API for it in NodeJS`,
+      desc: `The application manages recipes. It allows users to create, edit, remove and list recipes.
+       <b>It is currently in progress.</b> In the next version, all mentioned functionalities and state management NgXs will be implemented.<br>
+        This app currently uses mocks but I am currently working on API for it in NodeJS
+`,
       isApiMine: true,
       repo: 'https://github.com/Joasia662/Recipes-Menager',
       host: '',
@@ -108,7 +111,7 @@ export class ProjectCardsComponent {
     },{
       title: 'Grain Growth',
       imgPath: '../assets/Grain-Growth.png',
-      desc: `Desktop Application implemented using C## language. It simulates grow of the grain using 4 different neighbourhood methods`,
+      desc: `Desktop Application implemented using C# language. It simulates the growth of the grain using 4 different neighbourhood methods. It was implemented as a university project.`,
       isApiMine: true,
       repo: 'https://github.com/Joasia662/Grain-Growth',
       host: '',
@@ -122,13 +125,11 @@ export class ProjectCardsComponent {
     {
       title: 'Game Of Life',
       imgPath: '../assets/gameOfLife.png',
-      desc: `Windows Forms Application implementing the simulation: "Game of life (Life, The game of life)" - one of the first and most famous examples of a Cellular AutomatonTransition rules:<br>
-<ul>
-<li> Every dead cell (state 0) with three living neighbors (cells in state 1) is born (changes its state from 0 to 1) </li>
-<li> Any living cell that has two or three living neighbors (cells in state 1) remains alive (maintains state 1) </li>
-<li>Every living cell with more than 3 neighbors dies of "hunger" </li>
-<li>Every living cell with fewer than two neighbors dies too, from "loneliness" </li>
-</ul>
+      desc: `Windows Forms Application implementing the simulation: "Game of life (Life, The game of life)" - one of the first and most famous examples of a Cellular Automaton. It was implemented as a university project. Transition rules:<br>
+<br>Every dead cell (state 0) with three living neighbors (cells in state 1) is born (changes its state from 0 to 1)
+<br>Any living cell that has two or three living neighbors (cells in state 1) remains alive (maintains state 1) 
+<br>Every living cell with more than 3 neighbors dies of "hunger" 
+<br>Every living cell with fewer than two neighbors dies too, from "loneliness" 
 
       `,
       isApiMine: true,
@@ -155,6 +156,22 @@ export class ProjectCardsComponent {
       this.selectedIndex === 0 ? this.selectedIndex = this.projects.length - 1 : this.selectedIndex--
     }
 
+  }
+
+  goToPage(url: string){
+    window.open(
+      url,
+      '_blank' 
+    );
+  }
+
+  OpenLightHouseReport(templateRef: TemplateRef<any>){
+    
+    let dialogRef = this.dialog.open(templateRef, {
+      width: '1000px',
+      height: '880px'
+    });
+   
   }
 
 }

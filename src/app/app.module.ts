@@ -17,6 +17,7 @@ import { WorkExpirienceComponent } from './components/work-expirience/work-expir
 import { MatDialogModule } from '@angular/material/dialog';
 import { ProjectCardsComponent } from './project-cards/project-cards.component';
 import { MatMenuModule } from '@angular/material/menu';
+import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { MatMenuModule } from '@angular/material/menu';
     MatTooltipModule,
     MatIconModule,
     MatDialogModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,61 +3,89 @@
 
         <img [width]="950" height="540" [src]="projects[selectedIndex].imgPath">
         <div class="overlay">
-            <a (click)="changeSelectedItem('back')"> <mat-icon>arrow_left</mat-icon></a>
+            <a style="width: 5%;" (click)="changeSelectedItem('back')"> <mat-icon>arrow_left</mat-icon></a>
 
-            <div>
+            <div style="width: 90%;">
                 <h1>{{projects[selectedIndex].title}}</h1>
+
+
                 <h2 [innerHTML]='projects[selectedIndex].desc'></h2>
-                <h2 *ngIf="!projects[selectedIndex].isApiMine" > It uses publicly avaliable API: 
-                    <a [href]="projects[selectedIndex].apiLink" target="_blank">{{projects[selectedIndex].apiLink}}</a> </h2>
-
-                <br><br>
-
-                <h2>Repository Link <a [href]="projects[selectedIndex].repo" target="_blank">{{projects[selectedIndex].repo}}</a></h2>
+                <h2 *ngIf="!projects[selectedIndex].isApiMine"> It uses publicly avaliable API:
+                    <a [href]="projects[selectedIndex].apiLink" target="_blank">{{projects[selectedIndex].apiLink}}</a>
+                </h2>
+                <h2 *ngIf="projects[selectedIndex].host"> It is hosted on server</h2>
 
                 <br>
 
+                <h2 *ngIf="projects[selectedIndex].host">
+                    <button mat-flat-button (click)="goToPage(projects[selectedIndex].host)">Go to this
+                        application</button>
+                </h2>
+                <br>
+                <h2 *ngIf="projects[selectedIndex].lightHouseReport">You can read the print screen of Lighthouse Report
+                    <a (click)="OpenLightHouseReport(template)" target="_blank">here</a></h2>
+                <br>
+                <h2>Repository Link <a [href]="projects[selectedIndex].repo"
+                        target="_blank">{{projects[selectedIndex].repo}}</a></h2>
+                <br>
                 <div style="display: flex; justify-content:space-around; width: 80%; margin-left: 10%;">
 
                     <img *ngIf="projects[selectedIndex].tech.angular?.isPresent" class="tech" width="100"
-                        src="../assets/angular.png"
-                        matTooltip="This application was implemented using Angular">
+                        src="../assets/angular.png" matTooltip="This application was implemented using Angular">
                     <img *ngIf="projects[selectedIndex].tech.angular?.isInProgress" class="tech black-white" width="100"
                         src="../assets/angular.png"
-                        matTooltip="Frontend part of this application is going to be implemented in Angular">
-                   
-                 
-                    <img *ngIf="projects[selectedIndex].tech.materials?.isPresent" class="tech"  width="100" src="../assets/material.png" matTooltip="This application use Angular Material components.
+                        matTooltip="Application is still in development.Frontend part of this application is going to be implemented in Angular">
+
+
+                    <img *ngIf="projects[selectedIndex].tech.materials?.isPresent" class="tech" width="100"
+                        src="../assets/material.png" matTooltip="This application use Angular Material components.
                         Learn more on https://material.angular.io/">
-                    <img *ngIf="projects[selectedIndex].tech.materials?.isInProgress"class="tech black-white" width="100" src="../assets/material.png" matTooltip="This application is going to use Angular Material components.
+                    <img *ngIf="projects[selectedIndex].tech.materials?.isInProgress" class="tech black-white"
+                        width="100" src="../assets/material.png" matTooltip="Application is still in development.This application is going to use Angular Material components.
                         Learn more on https://material.angular.io/">
 
-                    <img *ngIf="projects[selectedIndex].tech.ngRx?.isPresent" class="tech " width="100" src="../assets/ngrx.svg" matTooltip="NgRx State Managment was used in this application.
+                    <img *ngIf="projects[selectedIndex].tech.ngRx?.isPresent" class="tech " width="100"
+                        src="../assets/ngrx.svg" matTooltip="NgRx State Managment was used in this application.
                         Learn more on https://ngrx.io/">
-                    <img *ngIf="projects[selectedIndex].tech.ngRx?.isInProgress" class="tech black-white" width="100" src="../assets/ngrx.svg" matTooltip="NgRx State Managment will be used in this application.
+                    <img *ngIf="projects[selectedIndex].tech.ngRx?.isInProgress" class="tech black-white" width="100"
+                        src="../assets/ngrx.svg" matTooltip="Application is still in development. NgRx State Managment is being implemented in this application.
                         Learn more on https://ngrx.io/">
 
-                    <img *ngIf="projects[selectedIndex].tech.ngXs?.isPresent" class="tech " width="100" src="../assets/ngxs.png" matTooltip="NgXs State Managment was used in this application.
+                    <img *ngIf="projects[selectedIndex].tech.ngXs?.isPresent" class="tech " width="100"
+                        src="../assets/ngxs.png" matTooltip="NgXs State Managment was used in this application.
                         Learn more on https://www.ngxs.io/">
-                    <img *ngIf="projects[selectedIndex].tech.ngXs?.isInProgress" class="tech black-white" width="100" src="../assets/ngxs.png" matTooltip="NgXs State Managment will be used in this application.
+                    <img *ngIf="projects[selectedIndex].tech.ngXs?.isInProgress" class="tech black-white" width="100"
+                        src="../assets/ngxs.png" matTooltip="Application is still in development. NgXs State Managment is being implemented in this application.
                         Learn more on https://www.ngxs.io/">
 
-                    <img *ngIf="projects[selectedIndex].tech.nodeJS?.isPresent" class="tech " width="100" src="../assets/nodeJS.png" matTooltip="API to this application was made using NodeJS">
-                    <img *ngIf="projects[selectedIndex].tech.nodeJS?.isInProgress" class="tech black-white" width="100" src="../assets/nodeJS.png" matTooltip="API to this application is in progress and it will be made using NodeJS">
+                    <img *ngIf="projects[selectedIndex].tech.nodeJS?.isPresent" class="tech " width="100"
+                        src="../assets/nodeJS.png" matTooltip="API to this application was made using NodeJS">
+                    <img *ngIf="projects[selectedIndex].tech.nodeJS?.isInProgress" class="tech black-white" width="100"
+                        src="../assets/nodeJS.png"
+                        matTooltip="API to this application is in progress and it will be made using NodeJS">
 
-                    <img *ngIf="projects[selectedIndex].tech.jasmine?.isPresent" class="tech" width="100" src="../assets/jasmine.svg" matTooltip="This application has implemented tests using Jasmine.
+                    <img *ngIf="projects[selectedIndex].tech.jasmine?.isPresent" class="tech" width="100"
+                        src="../assets/jasmine.svg" matTooltip="This application has implemented tests using Jasmine.
                         Learn more on https://jasmine.github.io/ ">
-                    <img *ngIf="projects[selectedIndex].tech.jasmine?.isInProgress" class="tech black-white" width="100" src="../assets/jasmine.svg" matTooltip="Tests using Jasmine are being currently implemented.
+                    <img *ngIf="projects[selectedIndex].tech.jasmine?.isInProgress" class="tech black-white" width="100"
+                        src="../assets/jasmine.svg" matTooltip="Tests using Jasmine are being currently implemented.
                     Learn more on https://jasmine.github.io/ ">
 
-                    <img *ngIf="projects[selectedIndex].tech.windowsForm?.isPresent" class="tech" height="200" src="../assets/windowsForm.png" matTooltip="This application was implemented using Windows Forms. Learn more: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-8.0
-                    Learn more on https://jasmine.github.io/ ">
-               
-                    
+                    <img *ngIf="projects[selectedIndex].tech.windowsForm?.isPresent" class="tech" height="200"
+                        src="../assets/windowsForm.png" matTooltip="This application was implemented using Windows Forms.
+                        Learn more: https://learn.microsoft.com/en-us/dotnet/desktop/winforms/?view=netdesktop-8.0">
+
+
                 </div>
             </div>
-            <a (click)="changeSelectedItem('next')"><mat-icon>arrow_right</mat-icon></a>
+            <a style="width: 5%; padding-right: 3%;"
+                (click)="changeSelectedItem('next')"><mat-icon>arrow_right</mat-icon></a>
         </div>
     </div>
 
 </div>
+
+
+<ng-template #template>
+    <img [src]="projects[selectedIndex].lightHouseReport" alt="">
+</ng-template>
