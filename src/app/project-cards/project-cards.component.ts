@@ -52,7 +52,7 @@ export class ProjectCardsComponent {
       isApiMine: false,
       apiLink: 'https://openweathermap.org/forecast5',
       repo: 'https://github.com/Joasia662/Weather-Forecast',
-      host: 'http://35.159.179.207/weather-forecast',
+      host: 'https://cdn.msaw328.dev/weather-forecast/',
       lightHouseReport: '../assets/WeatherForecastReport.png',
       tech: {
         angular: {
